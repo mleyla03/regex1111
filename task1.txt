@@ -1,0 +1,8 @@
+
+using System.Text.RegularExpressions;
+string domain= "https:///www.google.com/search?gs_ssp=eJzj4tTP1TewzEou=youtube";
+string pattern = @"^([https]|[http])+([\:])(\/{2})([a-zA-Z]+([0-9]+)?([a-zA-Z]+)?)(((\.)([a-zA-Z])+([0-9]+)?([a-zA-Z]+)?)+)$";
+
+bool isMatch=Regex.IsMatch(domain, pattern);
+
+Console.WriteLine(isMatch);
